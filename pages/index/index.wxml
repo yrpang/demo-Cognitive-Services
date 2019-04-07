@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+    <text wx:if='{{text==null}}'> 拍摄或上传图片体验一下吧！</text>
+    <text class='text1' wx:if='{{text!=null}}'>我有{{confidence}}%的把握说图片内容是</text>
+    <text class='text2' wx:if='{{text!=null}}'>{{text}}</text>
+    <canvas wx:if='{{text!=null}}' style="width: 300px; height: 300px;" canvas-id="image"></canvas>
+  <button class='button' bindtap='cam'>上传图片</button>
+
+</view>
